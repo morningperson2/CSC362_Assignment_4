@@ -1,0 +1,8 @@
+**/gnu
+**/.vscode
+**/html
+**/latex
+*.exe
+*.log
+*.json
+*.zip
