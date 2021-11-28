@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 struct DATE
 {
@@ -10,14 +12,16 @@ struct DATE
 struct PERSON
 {
     char* last_name;
-    DATE* date_of_birth;
+    struct DATE date_of_birth;
     int ssn;
     char* street_address;
     char* city;
     int age;
 };
 
-void free();
+FILE* fileOpenAndCheck(char *filename, char *openMode);
+
+void fillArr(FILE *infile1, FILE *infile2, struct PERSON *arr_emp);
 
 void sort();
 
