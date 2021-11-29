@@ -11,11 +11,11 @@ struct DATE
 
 struct PERSON
 {
-    char* last_name;
+    char last_name[50];
     struct DATE date_of_birth;
     int ssn;
-    char* street_address;
-    char* city;
+    char street_address[50];
+    char city[50];
     int age;
 };
 
@@ -23,8 +23,8 @@ FILE* fileOpenAndCheck(char *filename, char *openMode);
 
 void fillArr(FILE *infile1, FILE *infile2, struct PERSON *arr_emp);
 
-void sort();
+void sort(struct PERSON *arr_emp, int arr_size);
 
 void output();
 
-void freeMem();
+void freeMem(struct PERSON *arr_emp);
