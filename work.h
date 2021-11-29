@@ -25,6 +25,10 @@ void fillArr(FILE *infile1, FILE *infile2, struct PERSON *arr_emp);
 
 void sort(struct PERSON *arr_emp, int arr_size);
 
-void output();
+void output(struct PERSON *arr_emp, FILE *outFile);
 
 void freeMem(struct PERSON *arr_emp);
+
+void structInit(struct PERSON *arr_emp, int num);
+
+int checkNotNull(struct PERSON emp);
